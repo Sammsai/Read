@@ -34,6 +34,9 @@ updates:
         patterns:
           - "org.jetbrains.kotlin:*"
           - "com.google.devtools.ksp"
+    ignore:
+      - dependency-name: "com.google.protobuf:protobuf-javalite"
+        # 4.27+ 包含 well-known-types，与 firebase 的 protolite-well-known-types 冲突
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"

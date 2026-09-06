@@ -60,7 +60,9 @@ navigationCompose = "2.10.0"
 okhttp = "5.4.0"
 palette = "1.0.0"
 preference = "1.2.1"
-protobufJavalite = "4.36.1"
+# protobuf-javalite 固定在 4.26.1。Protobuf 4.27+ 自带了 well-known types（例如 DescriptorProtos 等），
+# 会与 Firebase (firebase-perf -> protolite-well-known-types:18.0.1) 产生 Duplicate class 冲突导致 checkReleaseDuplicateClasses 失败。
+protobufJavalite = "4.26.1"
 quickChineseTransfer = "0.2.17"
 # 书源 JS 通过 Packages.cn.hutool.* 直接调用，Hutool 作为书源运行时加密库保留在 classpath。
 # 应用代码不直接依赖它；加密走 JCA / help/crypto/CryptoUtils.kt。版本固定，勿升级（参考上游基线）。
