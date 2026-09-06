@@ -39,6 +39,18 @@ updates:
         # 4.27+ 包含 well-known-types，与 firebase 的 protolite-well-known-types 冲突
       - dependency-name: "org.mozilla:rhino"
         # 1.9.0+ 移除了 VMBridge 并修改了核心 API 签名，且书源 JS 引擎属于高风险平台能力
+      - dependency-name: "org.jsoup:jsoup"
+        # 1.16.2 以上行为变动破坏 AnalyzeByJSoup 与 JsoupXpath
+      - dependency-name: "cn.hutool:hutool-crypto"
+        # 版本固定 5.8.22 供书源 JS 使用，勿升级
+      - dependency-name: "com.squareup.okhttp3:okhttp"
+        # 5.5.0 破坏 Cronet 适配层的 HttpMethod 内部 API
+      - dependency-name: "com.github.jenly1314:zxing-lite"
+        # 3.5.0 DecodeConfig API 不兼容
+      - dependency-name: "org.jetbrains.kotlinx:kotlinx-datetime"
+        # 0.8.0 破坏 Clock.System API
+      - dependency-name: "androidx.compose.material3:material3"
+        # alpha27 存在 ExposedDropdownMenu 等 API 破坏性变动
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
