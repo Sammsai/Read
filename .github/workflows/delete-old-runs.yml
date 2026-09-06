@@ -1,0 +1,16 @@
+   name: 清理工作流历史
+
+   on:
+     workflow_dispatch: # 允许在 Actions 页面手动点击运行
+
+   jobs:
+     del_runs:
+       runs-on: ubuntu-latest
+       steps:
+         - name: Delete workflow runs
+           uses: Mattraks/delete-workflow-runs@v2
+           with:
+             token: ${{ secrets.GITHUB_TOKEN }}
+             repository: ${{ github.repository }}
+             retain_days: 0           # 保留天数，0 表示全部删除
+             keep_minimum_runs: 1     # 保留最少运行次数
