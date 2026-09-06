@@ -18,8 +18,8 @@ importers:
         specifier: ^11.1.0
         version: 11.3.0(vue@3.5.28(typescript@5.5.4))
       '@vueuse/shared':
-        specifier: ^11.1.0
-        version: 11.3.0(vue@3.5.28(typescript@5.5.4))
+        specifier: ^14.4.0
+        version: 14.4.0(vue@3.5.28(typescript@5.5.4))
       axios:
         specifier: ^1.7.7
         version: 1.13.5(debug@4.4.3(supports-color@8.1.1))
@@ -776,6 +776,11 @@ packages:
 
   '@vueuse/shared@11.3.0':
     resolution: {integrity: sha512-P8gSSWQeucH5821ek2mn/ciCk+MS/zoRKqdQIM3bHq6p7GXDAJLmnRRKmF5F65sAVJIfzQlwR3aDzwCn10s8hA==}
+
+  '@vueuse/shared@14.4.0':
+    resolution: {integrity: sha512-JRgY90Sz8DDtPMsaDflvPMp9xYk69JZAmbuDvAquUVXKr2gEjqtzGNTTthLfckH0BzBqvnu31gb4a8TGLRe79g==}
+    peerDependencies:
+      vue: ^3.5.0
 
   '@vueuse/shared@9.13.0':
     resolution: {integrity: sha512-UrnhU+Cnufu4S6JLCPZnkWh0WwZGUp72ktOF2DFptMlOs3TOdVv8xJN53zhHGARmVOsz5KqOls09+J1NR6sBKw==}
@@ -2528,6 +2533,10 @@ snapshots:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
+
+  '@vueuse/shared@14.4.0(vue@3.5.28(typescript@5.5.4))':
+    dependencies:
+      vue: 3.5.28(typescript@5.5.4)
 
   '@vueuse/shared@9.13.0(vue@3.5.28(typescript@5.5.4))':
     dependencies:
