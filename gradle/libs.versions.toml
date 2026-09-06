@@ -70,7 +70,9 @@ hutool = "5.8.47"
 room = "2.8.4"
 robolectric = "4.16.1"
 splitties = "3.0.0"
-rhino = "1.9.1"
+# Rhino 1.9.0+ 移除了 VMBridge，修改了 NativeJavaObject 构造签名 (TypeInfo)，并带来大量破坏性变更。
+# 书源/RSS/TTS 规则高度依赖 Rhino 运行时，版本固定为 1.8.1，勿随意升级。
+rhino = "1.8.1"
 desugar = "2.1.5"
 
 activity = "1.13.0"

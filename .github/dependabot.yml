@@ -37,6 +37,8 @@ updates:
     ignore:
       - dependency-name: "com.google.protobuf:protobuf-javalite"
         # 4.27+ 包含 well-known-types，与 firebase 的 protolite-well-known-types 冲突
+      - dependency-name: "org.mozilla:rhino"
+        # 1.9.0+ 移除了 VMBridge 并修改了核心 API 签名，且书源 JS 引擎属于高风险平台能力
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
