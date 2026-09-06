@@ -74,6 +74,7 @@ import org.intellij.markdown.ast.LeafASTNode
 import org.intellij.markdown.flavours.gfm.GFMElementTypes
 import org.intellij.markdown.flavours.gfm.GFMFlavourDescriptor
 import org.intellij.markdown.flavours.gfm.GFMTokenTypes
+import org.intellij.markdown.parser.CancellationToken
 import org.intellij.markdown.parser.MarkdownParser
 import splitties.systemservices.clipboardManager
 
@@ -84,7 +85,7 @@ private val flavour by lazy {
 }
 
 private val parser by lazy {
-    MarkdownParser(flavour)
+    MarkdownParser(flavour, cancellationToken = CancellationToken.NonCancellable)
 }
 
 private data class MarkdownParseResult(
@@ -101,7 +102,7 @@ private data class MarkdownImageHandlers(
 private val LocalMarkdownImageHandlers = staticCompositionLocalOf { MarkdownImageHandlers() }
 
 private fun parseMarkdown(content: String): MarkdownParseResult {
-    return MarkdownParseResult(content, parser.buildMarkdownTreeFromString(content))
+    return MarkdownParseResult(content, parser.buildMarkdownTreeFromString(content as CharSequence))
 }
 
 // ---- Main composable ----
