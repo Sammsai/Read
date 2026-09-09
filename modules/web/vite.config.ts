@@ -51,13 +51,19 @@ export default defineConfig(({ mode }): UserConfig => {
         "@utils": fileURLToPath(new URL("./src/utils/", import.meta.url)),
       },
     },
-    esbuild: {
-      drop: mode === "development" ? undefined : (["console", "debugger"] as ("console" | "debugger")[]),
-    },
     build: {
-      rollupOptions: {
+      rolldownOptions: {
         output: {
-          manualChunks: (id) => {
+          minify:
+            mode === "development"
+              ? false
+              : {
+                  compress: {
+                    dropConsole: true,
+                    dropDebugger: true,
+                  },
+                },
+          manualChunks: (id: string) => {
             if (id.includes("node_modules")) {
               return "vendor";
             }
