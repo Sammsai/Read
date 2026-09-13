@@ -27,8 +27,8 @@ importers:
         specifier: 2.14.5
         version: 2.14.5(vue@3.5.42(typescript@6.0.3))
       hotkeys-js:
-        specifier: ^4.0.7
-        version: 4.0.7
+        specifier: ^4.0.8
+        version: 4.0.8
       pinia:
         specifier: ^4.0.3
         version: 4.0.3(@vue/devtools-api@8.2.1)(typescript@6.0.3)(vue@3.5.42(typescript@6.0.3))
@@ -1087,8 +1087,8 @@ packages:
   hookable@5.5.3:
     resolution: {integrity: sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==}
 
-  hotkeys-js@4.0.7:
-    resolution: {integrity: sha512-/NET0IaevsVdHmr5fCf3gvAQYxfLPxW5gBIforvwDpHvHsf7gyDo/BJyrU75f3gArXHDzS5QwAxeByIoB6IapA==}
+  hotkeys-js@4.0.8:
+    resolution: {integrity: sha512-A0nu5ZU7cN8nEx3uGUHrv1WnJvjPFUw4Cfxj8pLyR5AIg14ACP4D0YZ+5JHAPjlvUbPbgok56+XTZWjscYCV4A==}
 
   https-proxy-agent@5.0.1:
     resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
@@ -2797,7 +2797,7 @@ snapshots:
 
   hookable@5.5.3: {}
 
-  hotkeys-js@4.0.7: {}
+  hotkeys-js@4.0.8: {}
 
   https-proxy-agent@5.0.1(supports-color@8.1.1):
     dependencies:
